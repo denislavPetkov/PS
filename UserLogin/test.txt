@@ -1,0 +1,5 @@
+Certificate for student Pavel
+Student: Pavel
+Faculty number: 1
+Semester: 5
+Specialty: KSI
