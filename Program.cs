@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace SP
+namespace UserLogin
 {
     class Program
     {
@@ -57,10 +58,18 @@ namespace SP
                         UserData.ListUsers();
                         return;
                     case 4:
-                        Logger.ShowLogs();
+                        IEnumerable<string> logs = Logger.GetLogs();
+                        foreach (string log in logs)
+                        {
+                            Console.WriteLine(log);
+                        }
                         return;
                     case 5:
-                        Logger.ShowCurrentSessionLogs();
+                        IEnumerable<string> currentActivitiess = Logger.GetCurrentSessionActivities("");
+                        foreach (string activity in currentActivitiess)
+                        {
+                            Console.WriteLine(activity);
+                        }
                         return;
                     case 6:
                         Console.Write("Student name: ");

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7pW6pKxqzJLtuzYWkhb1Vkb8LqrqTy2f/+du6ZyE1+OKYh8BPWn2e01Ue0bXJliHvVr3w07Q11ZlCUCl2qRTkw==",
+  "dgSpecHash": "rLMeZAQMBwGOOR7fH+BaJBPHGGK/IzCIU6pZoQCLVibe5h1KReChKDZsVWprejXKP1WKxhesfCJ41Y5JV5pv3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\denis\\Desktop\\workspace\\denislavPetkov\\TU\\C#\\SP\\SP.csproj",
+  "projectFilePath": "C:\\Users\\denis\\Desktop\\workspace\\denislavPetkov\\TU\\C#\\SP\\UserLogin\\UserLogin.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

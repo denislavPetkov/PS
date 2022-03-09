@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "SP/1.0.0": {
+      "UserLogin/1.0.0": {
         "runtime": {
-          "SP.dll": {}
+          "UserLogin.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "SP/1.0.0": {
+    "UserLogin/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
