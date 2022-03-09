@@ -1,6 +1,6 @@
 using System;
 
-namespace SP
+namespace UserLogin
 {
     public class LoginValidator
     {

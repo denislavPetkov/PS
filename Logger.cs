@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
-namespace SP
+namespace UserLogin
 {
     public static class Logger
     {
@@ -20,25 +21,27 @@ namespace SP
             File.AppendAllText(logFileName, activityLine + "\n");
         }
 
-        static public void ShowLogs()
+        static public IEnumerable<string> GetLogs()
         {
             if (!File.Exists(logFileName))
             {
-                return;
+                return null;
             }
-            Console.WriteLine("\nLogs from file:");
-            Console.WriteLine(File.ReadAllText(logFileName));
+
+            List<string> logsFromFile = new List<string>();
+
+            foreach (string line in File.ReadLines(logFileName))
+            {
+                logsFromFile.Add(line);
+            }
+            return logsFromFile;
         }
 
-        static public void ShowCurrentSessionLogs()
+        static public IEnumerable<string> GetCurrentSessionActivities(string filter)
         {
-            Console.WriteLine("Current log session:");
-
-            foreach (string log in currentSessionActivities)
-            {
-                Console.WriteLine(log);
-            }
-
+            return from activity in currentSessionActivities
+                   where activity.Contains(filter)
+                   select activity;
         }
 
         static public void CreateCertificate(string certificate, string pathToFile)

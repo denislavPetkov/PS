@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace SP
+
+namespace UserLogin
 {
     public static class UserData
     {
@@ -22,15 +24,9 @@ namespace SP
         static public User IsUserPassCorrect(string username, string password)
         {
             ResetTestUserData();
-            foreach (User user in _testUsers)
-            {
-                if (user.Username.Equals(username) && user.Password.Equals(password))
-                {
-                    return user;
-                }
-            }
-
-            return null;
+            return (from user in _testUsers
+                    where user.Username.Equals(username) && user.Password.Equals(password)
+                    select user).First();
         }
 
         static public void SetUserExpirationDate(string username, DateTime newExpirationDate)
@@ -63,10 +59,9 @@ namespace SP
 
         static public void ListUsers()
         {
-            Logger.LogActivity("Listing users:");
+            Logger.LogActivity("Listed users");
             foreach (User user in _testUsers)
             {
-                Logger.LogActivity("Listed users");
                 Console.WriteLine(user);
             }
         }
@@ -76,12 +71,10 @@ namespace SP
             Student student = GetStudent(username);
             if (student == null)
             {
-                Console.WriteLine("Student " + username + " not found!");
                 Logger.LogActivity("Student " + username + " not found!");
                 return;
             }
             Logger.LogActivity("Creating a certificate for student " + username);
-            Console.WriteLine("Done!");
             Logger.CreateCertificate("Certificate for a completed semester for student " + student.Username + student.ToString(), pathToFile);
             return;
         }
