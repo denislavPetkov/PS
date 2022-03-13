@@ -5,3 +5,7 @@
 .vs/PS/v15/.suo
 StudentInfoSystem/bin/Debug/.*
 UserLogin/bin/Debug/.*
+.vs/slnx.sqlite
+.vs/PS/v15/.suo
+.vs/PS/v15/.suo
+*.sqlite
