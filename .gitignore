@@ -1,0 +1,7 @@
+*.cache
+*.cache
+.*/Debug/.*
+*.exe
+.vs/PS/v15/.suo
+StudentInfoSystem/bin/Debug/.*
+UserLogin/bin/Debug/.*
