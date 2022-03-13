@@ -1,2 +1,2 @@
-# SP
- TU-Sofia, SP project
+# PS
+ TU-Sofia, PS project
