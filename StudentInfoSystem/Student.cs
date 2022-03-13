@@ -5,9 +5,9 @@ namespace StudentInfoSystem
 
         public Student() { }
 
-        public Student(string name, string middleName, string lastName, string faculty, string specialization, string qualificationDegree, StudentStatus studentStatus, string facultyNumber, SemestralCourse semestralCourse, string semestralStream, string semestralGroup)
+        public Student(string name, string middleName, string lastName, string faculty, string specialization, string qualificationDegree, StudentStatus studentStatus, string facultyNumber, int semestralCourse, int semestralStream, int semestralGroup)
         {
-            Name = name;
+            FirstName = name;
             MiddleName = middleName;
             LastName = lastName;
             Faculty = faculty;
@@ -20,7 +20,7 @@ namespace StudentInfoSystem
             SemestralGroup = semestralGroup;
         }
 
-        public string Name
+        public string FirstName
         { get; set; }
 
         public string MiddleName
@@ -40,11 +40,11 @@ namespace StudentInfoSystem
         public string FacultyNumber
         { get; set; }
 
-        public SemestralCourse SemestralCourse
+        public int SemestralCourse
         { get; set; }
-        public string SemestralStream
+        public int SemestralStream
         { get; set; }
-        public string SemestralGroup
+        public int SemestralGroup
         { get; set; }
     }
 }

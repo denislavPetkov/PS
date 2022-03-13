@@ -24,5 +24,94 @@ namespace StudentInfoSystem
         {
             InitializeComponent();
         }
+
+        private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetStudentInformation();
+        }
+
+        private void MiddleName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetStudentInformation();
+        }
+
+        private void LastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetStudentInformation();
+        }
+
+        private void SetStudentInformation()
+        {
+            Student currentStudent = GetStudent();
+            if (currentStudent != null)
+            {
+                SetFaculty(currentStudent.Faculty);
+                SetSpecialization(currentStudent.Specialization);
+                SetDegree(currentStudent.QualificationDegree);
+                SetStatus(currentStudent.StudentStatus.ToString());
+                SetFacultyNumber(currentStudent.FacultyNumber);
+                SetCourse(currentStudent.SemestralCourse.ToString());
+                SetStream(currentStudent.SemestralStream.ToString());
+                SetGroup(currentStudent.SemestralGroup.ToString());
+            }
+            else
+            {
+                SetFaculty("");
+                SetSpecialization("");
+                SetDegree("");
+                SetStatus("");
+                SetFacultyNumber("");
+                SetCourse("");
+                SetStream("");
+                SetGroup("");
+            }
+        }
+
+        private Student GetStudent()
+        {
+            return StudentData.GetStudentByNames(firstName.Text, middleName.Text, lastName.Text);
+        }
+
+        private void SetFaculty(String facultyString)
+        {
+            faculty.Text = facultyString;
+        }
+
+        private void SetSpecialization(String specializationString)
+        {
+            specialization.Text = specializationString;
+        }
+
+        private void SetDegree(String degreeString)
+        {
+            degree.Text = degreeString;
+        }
+
+        private void SetStatus(String statusString)
+        {
+            status.Text = statusString;
+        }
+
+        private void SetFacultyNumber(String facultyNumberString)
+        {
+            facultynumber.Text = facultyNumberString;
+        }
+
+        private void SetCourse(String courseString)
+        {
+            course.Text = courseString;
+        }
+
+        private void SetStream(String streamString)
+        {
+            stream.Text = streamString;
+        }
+
+        private void SetGroup(String groupString)
+        {
+            group.Text = groupString;
+        }
+
+
     }
 }

@@ -7,9 +7,14 @@ namespace StudentInfoSystem
 {
     public class StudentValidation
     {
-        public void GetStudentDataByUser(User user)
+        public Student GetStudentDataByUser(User user)
         {
+            if (user.Role != UserRoles.STUDENT)
+            {
+                return null;
+            }
 
+            return StudentData.GetStudentByFacultyNumber(user.FacNumber);
         }
     }
 }
