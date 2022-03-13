@@ -58,15 +58,13 @@ namespace UserLogin
                         UserData.ListUsers();
                         return;
                     case 4:
-                        IEnumerable<string> logs = Logger.GetLogs();
-                        foreach (string log in logs)
+                        foreach (string log in Logger.GetLogs())
                         {
                             Console.WriteLine(log);
                         }
                         return;
                     case 5:
-                        IEnumerable<string> currentActivitiess = Logger.GetCurrentSessionActivities("");
-                        foreach (string activity in currentActivitiess)
+                        foreach (string activity in Logger.GetCurrentSessionActivities(""))
                         {
                             Console.WriteLine(activity);
                         }
