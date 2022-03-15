@@ -9,3 +9,10 @@ UserLogin/bin/Debug/.*
 .vs/PS/v15/.suo
 .vs/PS/v15/.suo
 *.sqlite
+.vs/PS/v15/Server/sqlite3/storage.ide-wal
+.vs/PS/v15/Server/sqlite3/storage.ide
+.vs/PS/v15/Server/sqlite3/storage.ide-shm
+.vs/PS/v15/Server/sqlite3/storage.ide-wal
+.vs/PS/v15/Server/sqlite3/storage.ide-shm
+.vs/PS/v15/Server/sqlite3/storage.ide
+.vs/PS/v15/.suo

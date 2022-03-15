@@ -24,26 +24,26 @@
 
         </GroupBox>
         <GroupBox Header="Студентска информация" HorizontalAlignment="Left" Height="235" Margin="10,159,0,0" VerticalAlignment="Top" Width="765" Grid.ColumnSpan="3">
-
+            <Grid HorizontalAlignment="Left" Height="198" VerticalAlignment="Top" Width="745" Margin="0,10,0,0" Grid.ColumnSpan="3">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Факултет:" VerticalAlignment="Top" Margin="15,16,0,0" Height="24" Width="70"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Специалност:" VerticalAlignment="Top" Margin="15,51,0,0" Height="23" Width="75" RenderTransformOrigin="0.292,-0.91"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ОКС:" VerticalAlignment="Top" Margin="15,86,0,0" Height="24" Width="70"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Статус:" VerticalAlignment="Top" Margin="15,121,0,0" Height="24" Width="70"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фак.номер:" VerticalAlignment="Top" Margin="15,156,0,0" Height="24" Width="70"/>
+                <TextBox x:Name="faculty" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox x:Name="specialization" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" />
+                <TextBox x:Name="degree" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox x:Name="status" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox x:Name="facultynumber" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Курс:" VerticalAlignment="Top" Margin="514,16,0,0" Height="24" Width="70"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поток:" VerticalAlignment="Top" Margin="514,51,0,0" Height="24" Width="70"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Група:" VerticalAlignment="Top" Margin="514,86,0,0" Height="24" Width="70"/>
+                <TextBox x:Name="course" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox x:Name="stream" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox x:Name="group" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
+            </Grid>
         </GroupBox>
-        <Grid HorizontalAlignment="Left" Height="198" VerticalAlignment="Top" Width="745" Margin="22,183,0,0" Grid.ColumnSpan="3">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Факултет:" VerticalAlignment="Top" Margin="15,16,0,0" Height="24" Width="70"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Специалност:" VerticalAlignment="Top" Margin="15,51,0,0" Height="23" Width="75" RenderTransformOrigin="0.292,-0.91"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ОКС:" VerticalAlignment="Top" Margin="15,86,0,0" Height="24" Width="70"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Статус:" VerticalAlignment="Top" Margin="15,121,0,0" Height="24" Width="70"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фак.номер:" VerticalAlignment="Top" Margin="15,156,0,0" Height="24" Width="70"/>
-            <TextBox x:Name="faculty" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-            <TextBox x:Name="specialization" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" />
-            <TextBox x:Name="degree" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-            <TextBox x:Name="status" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-            <TextBox x:Name="facultynumber" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Курс:" VerticalAlignment="Top" Margin="514,16,0,0" Height="24" Width="70"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поток:" VerticalAlignment="Top" Margin="514,51,0,0" Height="24" Width="70"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Група:" VerticalAlignment="Top" Margin="514,86,0,0" Height="24" Width="70"/>
-            <TextBox x:Name="course" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
-            <TextBox x:Name="stream" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
-            <TextBox x:Name="group" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
-        </Grid>
+
 
 
     </Grid>
