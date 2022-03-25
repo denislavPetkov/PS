@@ -46,5 +46,10 @@ namespace StudentInfoSystem
         { get; set; }
         public int SemestralGroup
         { get; set; }
+
+        public string GetNames()
+        {
+            return this.FirstName + this.MiddleName + this.LastName;
+        }
     }
 }

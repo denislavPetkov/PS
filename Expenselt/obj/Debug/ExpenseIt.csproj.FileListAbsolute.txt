@@ -1,0 +1,15 @@
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\bin\Debug\Expenselt.exe.config
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\bin\Debug\Expenselt.exe
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\bin\Debug\Expenselt.pdb
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\ExpenseIt.csprojAssemblyReference.cache
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\MainWindow.g.cs
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\App.g.cs
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\Expenselt_MarkupCompile.cache
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\Expenselt_MarkupCompile.lref
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\MainWindow.baml
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\Expenselt.g.resources
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\Expenselt.Properties.Resources.resources
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\ExpenseIt.csproj.GenerateResource.cache
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\ExpenseIt.csproj.CoreCompileInputs.cache
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\Expenselt.exe
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\Expenselt\obj\Debug\Expenselt.pdb

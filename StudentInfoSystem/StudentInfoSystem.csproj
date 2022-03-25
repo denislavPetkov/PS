@@ -105,5 +105,12 @@
       <Name>UserLogin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DenislavBiserovPetkov.png" />
+    <Resource Include="Images\PavelBiserovPetkov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FirstnameMiddlenameLastname.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
