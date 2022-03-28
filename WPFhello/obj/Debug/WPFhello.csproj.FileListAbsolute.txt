@@ -13,3 +13,5 @@ C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\WPFhello\obj\Debug\WPFh
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\WPFhello\obj\Debug\WPFhello.csproj.CoreCompileInputs.cache
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\WPFhello\obj\Debug\WPFhello.exe
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\WPFhello\obj\Debug\WPFhello.pdb
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\WPFhello\obj\Debug\MyMessage.g.cs
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\WPFhello\obj\Debug\MyMessage.baml
