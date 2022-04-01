@@ -25,6 +25,30 @@ namespace StudentInfoSystem
             InitializeComponent();
         }
 
+        public MainWindow(Student currentStudent)
+        {
+            InitializeComponent();
+
+            SetFaculty(currentStudent.Faculty);
+            SetSpecialization(currentStudent.Specialization);
+            SetDegree(currentStudent.QualificationDegree);
+            SetStatus(currentStudent.StudentStatus.ToString());
+            SetFacultyNumber(currentStudent.FacultyNumber);
+            SetCourse(currentStudent.SemestralCourse.ToString());
+            SetStream(currentStudent.SemestralStream.ToString());
+            SetGroup(currentStudent.SemestralGroup.ToString());
+            var uriSource = new Uri(@"/StudentInfoSystem;component/Images/" + currentStudent.GetNames() + ".png", UriKind.Relative);
+            studentPicture.Source = new BitmapImage(uriSource);
+
+            firstName.Text = currentStudent.FirstName;
+            middleName.Text = currentStudent.MiddleName;
+            lastName.Text = currentStudent.LastName;
+
+            firstName.IsEnabled = false;
+            middleName.IsEnabled = false;
+            lastName.IsEnabled = false;
+        }
+
         private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
         {
             SetStudentInformation();

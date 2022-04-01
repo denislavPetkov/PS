@@ -16,9 +16,9 @@ namespace UserLogin
                 return;
             }
             _testUsers = new List<User>();
-            _testUsers.Add(new User("Denislav", "admin", "121219031", UserRoles.ADMIN, DateTime.Now));
+            _testUsers.Add(new User("Denislav", "admin", "121219031", UserRoles.INSPECTOR, DateTime.Now));
             _testUsers.Add(new Student("Pavel", "test1", "1", UserRoles.STUDENT, DateTime.Now, 5, "KSI"));
-            _testUsers.Add(new Student("testSt2", "test2", "2", UserRoles.STUDENT, DateTime.Now, 2, "ITI"));
+            _testUsers.Add(new Student("Denislav", "Petkov", "121219031", UserRoles.STUDENT, DateTime.Now, 2, "ITI"));
         }
 
         static public User IsUserPassCorrect(string username, string password)

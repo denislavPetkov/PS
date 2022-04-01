@@ -7,7 +7,7 @@ namespace StudentInfoSystem
 {
     public class StudentValidation
     {
-        public Student GetStudentDataByUser(User user)
+        public static Student GetStudentDataByUser(User user)
         {
             if (user.Role != UserRoles.STUDENT)
             {

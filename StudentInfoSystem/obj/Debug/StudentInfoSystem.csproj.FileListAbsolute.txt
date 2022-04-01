@@ -36,3 +36,7 @@ C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\StudentInfoSyst
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.CopyComplete
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.exe
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.pdb
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\obj\Debug\LoginWindow.g.cs
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\obj\Debug\LoginWindow.baml
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\obj\Debug\StudentListWindow.g.cs
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\obj\Debug\StudentListWindow.baml

@@ -51,5 +51,10 @@ namespace StudentInfoSystem
         {
             return this.FirstName + this.MiddleName + this.LastName;
         }
+
+        public override string ToString()
+        {
+            return this.FirstName + " " + this.MiddleName + " " + this.LastName + " " + Faculty + " " + Specialization + " " + StudentStatus;
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace StudentInfoSystem
     public class StudentData
     {
         static public List<Student> TestStudents
-        { get; private set; } = new List<Student> { new Student("Denislav", "Biserov", "Petkov", "FKST","KSI", "Bachelor", StudentStatus.PASSED, "121219099", 6, 9, 31),
+        { get; private set; } = new List<Student> { new Student("Denislav", "Biserov", "Petkov", "FKST","KSI", "Bachelor", StudentStatus.PASSED, "121219031", 6, 9, 31),
                                                     new Student("Pavel", "Biserov", "Petkov", "FKST","KSI", "Masters", StudentStatus.PASSED, "121213100", 4, 12, 31),
                                                     new Student("Firstname", "Middlename", "Lastname", "Faculty","Specialization", "Degree", StudentStatus.FAILED, "Faculty number", 99, 99, 99)};
 
