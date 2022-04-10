@@ -17,9 +17,9 @@
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Име:" VerticalAlignment="Top" Margin="19,10,0,0" Height="26" Width="50"/>
                 <TextBlock HorizontalAlignment="Left" Margin="19,36,0,0" TextWrapping="Wrap" Text="Презиме:" VerticalAlignment="Top" Height="25" Width="55"/>
                 <TextBlock HorizontalAlignment="Left" Margin="19,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="55"><Run Text="Фамилия"/><Run Text=":"/></TextBlock>
-                <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="20" Margin="94,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="FirstName_TextChanged"/>
-                <TextBox x:Name="middleName" HorizontalAlignment="Left" Height="20" Margin="94,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="MiddleName_TextChanged"/>
-                <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="20" Margin="94,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="LastName_TextChanged"/>
+                <TextBox Text="{Binding Path=FirstName}" x:Name="firstName" HorizontalAlignment="Left" Height="20" Margin="94,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="FirstName_TextChanged"/>
+                <TextBox Text="{Binding Path=MiddleName}" x:Name="middleName" HorizontalAlignment="Left" Height="20" Margin="94,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="MiddleName_TextChanged"/>
+                <TextBox Text="{Binding Path=LastName}" x:Name="lastName" HorizontalAlignment="Left" Height="20" Margin="94,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="LastName_TextChanged"/>
             </Grid>
 
         </GroupBox>
@@ -30,17 +30,17 @@
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ОКС:" VerticalAlignment="Top" Margin="15,86,0,0" Height="24" Width="70"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Статус:" VerticalAlignment="Top" Margin="15,121,0,0" Height="24" Width="70"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фак.номер:" VerticalAlignment="Top" Margin="15,156,0,0" Height="24" Width="70"/>
-                <TextBox x:Name="faculty" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-                <TextBox x:Name="specialization" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" />
-                <TextBox x:Name="degree" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-                <TextBox x:Name="status" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
-                <TextBox x:Name="facultynumber" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=Faculty}" x:Name="faculty" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=Specialization}" x:Name="specialization" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" />
+                <TextBox Text="{Binding Path=QualificationDegree}" x:Name="degree" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=StudentStatus}" x:Name="status" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=FacultyNumber}" x:Name="facultynumber" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Курс:" VerticalAlignment="Top" Margin="514,16,0,0" Height="24" Width="70"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поток:" VerticalAlignment="Top" Margin="514,51,0,0" Height="24" Width="70"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Група:" VerticalAlignment="Top" Margin="514,86,0,0" Height="24" Width="70"/>
-                <TextBox x:Name="course" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
-                <TextBox x:Name="stream" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
-                <TextBox x:Name="group" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=SemestralCourse}" x:Name="course" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=SemestralStream}" x:Name="stream" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=SemestralGroup}" x:Name="group" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="564,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.321,-0.013"/>
             </Grid>
         </GroupBox>
 

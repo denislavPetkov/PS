@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using System.ComponentModel;
+using System.Windows.Controls;
 using System;
+using System.Collections.ObjectModel;
 
 namespace ExpenseIt
 {
     /// <summary>
     /// Interaction logic for ExpenseItHome.xaml
     /// </summary>
-    public partial class ExpenseItHome : Window
+    public partial class ExpenseItHome : Window, INotifyPropertyChanged
     {
         public ExpenseItHome()
         {
@@ -88,9 +91,34 @@ namespace ExpenseIt
                     }
                 }
             };
+            PersonsChecked = new ObservableCollection<string>();
         }
 
-        public DateTime LastChecked { get; set; }
+        public ObservableCollection<string> PersonsChecked
+        { get; set; }
+
+        private DateTime lastChecked;
+        public DateTime LastChecked
+        {
+            get { return lastChecked; }
+            set
+            {
+                lastChecked = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("LastChecked"));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void peopleListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            LastChecked = DateTime.Now;
+            Person p = (Person)peopleListBox.SelectedItem;
+            PersonsChecked.Add(p.Name);
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

@@ -114,6 +114,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\PS-Lab5-example3\MinimalMVVM\MinimalMVVM.csproj">
+      <Project>{A71E07A6-F620-46E1-8C30-D6AE9552136A}</Project>
+      <Name>MinimalMVVM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserLogin\UserLogin.csproj">
       <Project>{af6e50fe-f9b2-493b-9bfa-411e54f0aad0}</Project>
       <Name>UserLogin</Name>
