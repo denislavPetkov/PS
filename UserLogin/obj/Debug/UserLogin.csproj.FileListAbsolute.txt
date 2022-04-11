@@ -12,3 +12,8 @@ C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\UserLogin\obj\D
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\UserLogin\obj\Debug\UserLogin.csproj.CoreCompileInputs.cache
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\UserLogin\obj\Debug\UserLogin.exe
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS_Project\UserLogin\obj\Debug\UserLogin.pdb
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\UserLogin\bin\Debug\EntityFramework.dll
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\UserLogin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\UserLogin\bin\Debug\EntityFramework.xml
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\UserLogin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\UserLogin\obj\Debug\UserLogin.csproj.CopyComplete

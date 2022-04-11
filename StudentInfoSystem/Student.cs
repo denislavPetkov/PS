@@ -3,6 +3,8 @@ namespace StudentInfoSystem
     public class Student
     {
 
+        public int StudentId { get; set; }
+
         public Student() { }
 
         public Student(string name, string middleName, string lastName, string faculty, string specialization, string qualificationDegree, StudentStatus studentStatus, string facultyNumber, int semestralCourse, int semestralStream, int semestralGroup)
@@ -28,6 +30,9 @@ namespace StudentInfoSystem
 
         public string LastName
         { get; set; }
+
+
+        public byte[] Photo { get; set; }
 
         public string Faculty
         { get; set; }

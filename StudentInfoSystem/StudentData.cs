@@ -13,7 +13,7 @@ namespace StudentInfoSystem
 
         static public Student GetStudentByFacultyNumber(String facNumber)
         {
-            foreach (Student student in TestStudents)
+            foreach (Student student in new StudentInfoContext().Students)
             {
                 if (student.FacultyNumber.Equals(facNumber))
                 {

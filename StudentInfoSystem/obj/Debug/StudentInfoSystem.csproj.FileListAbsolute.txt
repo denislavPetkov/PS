@@ -42,3 +42,7 @@ C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\obj\D
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\obj\Debug\StudentListWindow.baml
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\bin\Debug\MinimalMVVM.exe
 C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\bin\Debug\MinimalMVVM.pdb
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\bin\Debug\EntityFramework.dll
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\bin\Debug\EntityFramework.xml
+C:\Users\denis\Desktop\workspace\denislavPetkov\TU\C#\PS\StudentInfoSystem\bin\Debug\EntityFramework.SqlServer.xml

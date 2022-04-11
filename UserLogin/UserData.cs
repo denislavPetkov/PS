@@ -7,6 +7,10 @@ namespace UserLogin
 {
     public static class UserData
     {
+        public static List<User> TestUsers
+        {
+            get { return _testUsers; }
+        }
         private static List<User> _testUsers;
 
         static private void ResetTestUserData()
@@ -24,19 +28,22 @@ namespace UserLogin
         static public User IsUserPassCorrect(string username, string password)
         {
             ResetTestUserData();
-            return (from user in _testUsers
+            return (from user in new UserContext().Users
                     where user.Username.Equals(username) && user.Password.Equals(password)
                     select user).First();
         }
 
         static public void SetUserExpirationDate(string username, DateTime newExpirationDate)
         {
-            foreach (User user in _testUsers)
+            UserContext context = new UserContext();
+
+            foreach (User user in context.Users)
             {
                 if (user.Username.Equals(username))
                 {
                     Logger.LogActivity("Changed account expiration date of user " + user.Username);
                     user.ExpirationDate = newExpirationDate;
+                    context.SaveChanges();
                     return;
                 }
             }
@@ -45,12 +52,15 @@ namespace UserLogin
 
         static public void AssignUserRole(string username, UserRoles newUserRole)
         {
-            foreach (User user in _testUsers)
+            UserContext context = new UserContext();
+
+            foreach (User user in context.Users)
             {
                 if (user.Username.Equals(username))
                 {
                     Logger.LogActivity("Changed role of user " + user.Username);
                     user.Role = newUserRole;
+                    context.SaveChanges();
                     return;
                 }
             }
@@ -60,7 +70,7 @@ namespace UserLogin
         static public void ListUsers()
         {
             Logger.LogActivity("Listed users");
-            foreach (User user in _testUsers)
+            foreach (User user in new UserContext().Users)
             {
                 Console.WriteLine(user);
             }

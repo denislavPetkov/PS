@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace StudentInfoSystem
 {
@@ -23,6 +25,9 @@ namespace StudentInfoSystem
         public MainWindow()
         {
             InitializeComponent();
+            FillStudStatusChoices();
+            this.DataContext = this;
+
         }
 
         public MainWindow(Student currentStudent)
@@ -83,6 +88,34 @@ namespace StudentInfoSystem
             }
         }
 
+        public List<string> StudStatusChoices { get; set; }
+
+        private void FillStudStatusChoices()
+        {
+            StudStatusChoices = new List<string>();
+            using (IDbConnection connection = new
+            SqlConnection(Properties.Settings.Default.DbConnect))
+            {
+                string sqlquery =
+                @"SELECT StatusDescr
+FROM StudStatus";
+                IDbCommand command = new SqlCommand();
+                command.Connection = connection;
+                connection.Open();
+                command.CommandText = sqlquery;
+                IDataReader reader = command.ExecuteReader();
+                bool notEndOfResult;
+                notEndOfResult = reader.Read();
+                while (notEndOfResult)
+
+                {
+                    string s = reader.GetString(0);
+                    StudStatusChoices.Add(s);
+                    notEndOfResult = reader.Read();
+                }
+            }
+        }
+
         private Student GetStudent()
         {
             return StudentData.GetStudentByNames(firstName.Text, middleName.Text, lastName.Text);
@@ -105,7 +138,7 @@ namespace StudentInfoSystem
 
         private void SetStatus(String statusString)
         {
-            status.Text = statusString;
+            //status.Text = statusString;
         }
 
         private void SetFacultyNumber(String facultyNumberString)
@@ -128,6 +161,16 @@ namespace StudentInfoSystem
             group.Text = groupString;
         }
 
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            testButton.Content = new StudentInfoContext().TestUsersIfEmpty();
 
+            if (new StudentInfoContext().TestStudentsIfEmpty())
+                new StudentInfoContext().CopyTestStudents();
+
+            if (new StudentInfoContext().TestUsersIfEmpty())
+                new StudentInfoContext().CopyTestUsers();
+
+        }
     }
 }
