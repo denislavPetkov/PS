@@ -138,7 +138,7 @@ FROM StudStatus";
 
         private void SetStatus(String statusString)
         {
-            //status.Text = statusString;
+            status.Text = statusString;
         }
 
         private void SetFacultyNumber(String facultyNumberString)
@@ -161,16 +161,6 @@ FROM StudStatus";
             group.Text = groupString;
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-            testButton.Content = new StudentInfoContext().TestUsersIfEmpty();
-
-            if (new StudentInfoContext().TestStudentsIfEmpty())
-                new StudentInfoContext().CopyTestStudents();
-
-            if (new StudentInfoContext().TestUsersIfEmpty())
-                new StudentInfoContext().CopyTestUsers();
-
-        }
+      
     }
 }

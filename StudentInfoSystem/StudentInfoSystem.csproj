@@ -77,6 +77,10 @@
     </Compile>
     <Compile Include="StudentStatus.cs" />
     <Compile Include="StudentValidation.cs" />
+    <Compile Include="ViewModel\LoginCommand.cs" />
+    <Compile Include="ViewModel\NoLoginCommand.cs" />
+    <Compile Include="ViewModel\ObservableObject.cs" />
+    <Compile Include="ViewModel\LoginVM.cs" />
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

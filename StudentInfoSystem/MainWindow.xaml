@@ -20,7 +20,7 @@
                 <TextBox Text="{Binding Path=FirstName}" x:Name="firstName" HorizontalAlignment="Left" Height="20" Margin="94,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="FirstName_TextChanged"/>
                 <TextBox Text="{Binding Path=MiddleName}" x:Name="middleName" HorizontalAlignment="Left" Height="20" Margin="94,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="MiddleName_TextChanged"/>
                 <TextBox Text="{Binding Path=LastName}" x:Name="lastName" HorizontalAlignment="Left" Height="20" Margin="94,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" TextChanged="LastName_TextChanged"/>
-                <Button x:Name="testButton" Content="Button" HorizontalAlignment="Left" Margin="619,46,0,0" VerticalAlignment="Top" Width="75" Click="TestButton_Click"/>
+                <!--<Button x:Name="testButton" Content="Button" HorizontalAlignment="Left" Margin="619,46,0,0" VerticalAlignment="Top" Width="75" Click="TestButton_Click"/>-->
 
             </Grid>
 
@@ -36,8 +36,8 @@
                 <TextBox Text="{Binding Path=Specialization}" x:Name="specialization" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013" />
                 <TextBox Text="{Binding Path=QualificationDegree}" x:Name="degree" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
                 
-                <!--<TextBox Text="{Binding Path=StudentStatus}" x:Name="status" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>-->
-                <ListBox ItemsSource="{Binding StudStatusChoices}" x:Name="status"  HorizontalAlignment="Left" Height="20" Margin="99,121,0,0"  VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <TextBox Text="{Binding Path=StudentStatus}" x:Name="status" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
+                <!--<ListBox ItemsSource="{Binding StudStatusChoices}" x:Name="status"  HorizontalAlignment="Left" Height="20" Margin="99,121,0,0"  VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>-->
 
                 <TextBox Text="{Binding Path=FacultyNumber}" x:Name="facultynumber" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="99,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" RenderTransformOrigin="0.321,-0.013"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Курс:" VerticalAlignment="Top" Margin="514,16,0,0" Height="24" Width="70"/>

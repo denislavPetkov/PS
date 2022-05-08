@@ -22,29 +22,8 @@ namespace StudentInfoSystem
         public LoginWindow()
         {
             InitializeComponent();
+            this.DataContext = new ViewModel.LoginVM();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            String username = UsernameTextBox.Text.ToString();
-            String password = PasswordTextBox.Text.ToString();
-
-            UserLogin.UserRoles userRole = UserLogin.LoginValidator.Authenticate(username, password, null);
-
-            if (userRole == UserLogin.UserRoles.STUDENT)
-            {
-                Student student = StudentValidation.GetStudentDataByUser(UserLogin.LoginValidator.currentUser);
-                new MainWindow(student).Show();
-            }
-            if (userRole == UserLogin.UserRoles.INSPECTOR)
-            {
-                new StudentListWindow(StudentData.TestStudents).Show();
-            }
-        }
-
-        private void NoLoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            new MainWindow().Show();
-        }
     }
 }
