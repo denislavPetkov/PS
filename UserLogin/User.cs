@@ -4,10 +4,11 @@ namespace UserLogin
 {
     public class User
     {
+        public int UserId { get; set; }
 
         public User() { }
 
-        public User(string userName, string password, string facNumber, UserRoles role, DateTime creationData)
+        public User(string userName, string password, string facNumber, string role, DateTime creationData)
         {
             Username = userName;
             Password = password;
@@ -17,26 +18,24 @@ namespace UserLogin
             ExpirationDate = new DateTime(2999, 1, 1);
         }
 
-        public DateTime ExpirationDate
+        public DateTime? ExpirationDate
         { get; set; }
-        public DateTime CreationDate
+        public DateTime? CreationDate
         { get; set; }
-        public String Username
+        public string Username
         { get; set; }
-        public String Password
+        public string Password
         { get; set; }
-        public String FacNumber
+        public string FacNumber
         { get; set; }
-        public UserRoles Role
+        public string Role
         { get; set; }
 
         public override string ToString()
         {
             return "\nUsername: " + Username +
                     "\nFaculty number: " + FacNumber +
-                    "\nRole: " + Role +
-                    "\nCreation Date: " + CreationDate.ToString("dddd, dd MMMM yyyy") +
-                    "\nExpiration Date: " + ExpirationDate.ToString("dddd, dd MMMM yyyy");
+                    "\nRole: " + Role;
         }
 
     }

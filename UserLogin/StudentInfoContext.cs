@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentInfoSystem
+namespace UserLogin
 {
     public class StudentInfoContext : DbContext
     {
@@ -13,26 +13,6 @@ namespace StudentInfoSystem
         { }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<UserLogin.User> Users { get; set; }
-
-        public bool TestUsersIfEmpty()
-        {
-            StudentInfoContext context = new StudentInfoContext();
-            IEnumerable<UserLogin.User> queryUsers = context.Users;
-            return queryUsers.Count() == 0;
-        }
-
-        public void CopyTestUsers()
-        {
-            StudentInfoContext context = new StudentInfoContext();
-
-            foreach (UserLogin.User user in UserLogin.UserData.TestUsers)
-            {
-                context.Users.Add(user);
-            }
-
-            context.SaveChanges();
-        }
 
         public bool TestStudentsIfEmpty()
         {

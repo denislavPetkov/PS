@@ -9,7 +9,7 @@ namespace StudentInfoSystem
     {
         public static Student GetStudentDataByUser(User user)
         {
-            if (user.Role != UserRoles.STUDENT)
+            if (user.Role != UserRoles.STUDENT.ToString())
             {
                 return null;
             }

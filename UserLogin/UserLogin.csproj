@@ -63,6 +63,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Student.cs" />
+    <Compile Include="StudentData.cs" />
+    <Compile Include="StudentInfoContext.cs" />
+    <Compile Include="StudentStatus.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserContext.cs" />
     <Compile Include="UserData.cs" />

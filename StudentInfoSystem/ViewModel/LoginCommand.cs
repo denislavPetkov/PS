@@ -18,12 +18,12 @@ namespace StudentInfoSystem.ViewModel
 
             if (userRole == UserLogin.UserRoles.STUDENT)
             {
-                Student student = StudentValidation.GetStudentDataByUser(UserLogin.LoginValidator.currentUser);
+                UserLogin.Student student = StudentValidation.GetStudentDataByUser(UserLogin.LoginValidator.currentUser);
                 new MainWindow(student).Show();
             }
             if (userRole == UserLogin.UserRoles.INSPECTOR)
             {
-                new StudentListWindow(StudentData.TestStudents).Show();
+                new StudentListWindow(UserLogin.StudentData.TestStudents).Show();
             }
         }
 

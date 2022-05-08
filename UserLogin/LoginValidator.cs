@@ -36,7 +36,7 @@ namespace UserLogin
             }
             Console.WriteLine("\nAuthenticated as a user " + currentUser);
             Logger.LogActivity("Logged successfully!");
-            return currentUser.Role;
+            return (UserRoles)Enum.Parse(typeof(UserRoles), currentUser.Role, true);
         }
     }
 }

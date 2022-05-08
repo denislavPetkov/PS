@@ -24,7 +24,7 @@ namespace StudentInfoSystem
             InitializeComponent();
         }
 
-        public StudentListWindow(List<Student> students)
+        public StudentListWindow(List<UserLogin.Student> students)
         {
             InitializeComponent();
             Binding myBinding = new Binding();

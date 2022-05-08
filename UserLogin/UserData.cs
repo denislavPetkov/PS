@@ -11,7 +11,9 @@ namespace UserLogin
         {
             get { return _testUsers; }
         }
-        private static List<User> _testUsers;
+        private static List<User> _testUsers= new List<User>{ new User("Denislav", "admin", "121219031", UserRoles.INSPECTOR.ToString(), DateTime.Now) ,
+                                                               new Student("Pavel","Biserov", "Petkov", "FKST", "KSI","Bachelor","Learning","121219000",6,9,29),
+                                                                new Student("Denislav", "Biserov", "Petkov", "FKST", "KSI", "Bachelor", "Learning", "121219099", 6, 9, 29)};
 
         static private void ResetTestUserData()
         {
@@ -20,9 +22,9 @@ namespace UserLogin
                 return;
             }
             _testUsers = new List<User>();
-            _testUsers.Add(new User("Denislav", "admin", "121219031", UserRoles.INSPECTOR, DateTime.Now));
-            _testUsers.Add(new Student("Pavel", "test1", "1", UserRoles.STUDENT, DateTime.Now, 5, "KSI"));
-            _testUsers.Add(new Student("Denislav", "Petkov", "121219031", UserRoles.STUDENT, DateTime.Now, 2, "ITI"));
+            _testUsers.Add(new User("Denislav", "admin", "121219031", UserRoles.INSPECTOR.ToString(), DateTime.Now));
+            _testUsers.Add(new Student("Pavel","Biserov", "Petkov", "FKST", "KSI","Bachelor","Learning","121219000",6,9,29));
+            _testUsers.Add(new Student("Denislav", "Biserov", "Petkov", "FKST", "KSI", "Bachelor", "Learning", "121219099", 6, 9, 29));
         }
 
         static public User IsUserPassCorrect(string username, string password)
@@ -59,7 +61,7 @@ namespace UserLogin
                 if (user.Username.Equals(username))
                 {
                     Logger.LogActivity("Changed role of user " + user.Username);
-                    user.Role = newUserRole;
+                    user.Role = newUserRole.ToString();
                     context.SaveChanges();
                     return;
                 }
@@ -95,7 +97,7 @@ namespace UserLogin
         {
             foreach (User user in _testUsers)
             {
-                if (user.Username.Equals(username) && user.Role == UserRoles.STUDENT)
+                if (user.Username.Equals(username) && user.Role == UserRoles.STUDENT.ToString())
                 {
                     return (Student)user;
                 }

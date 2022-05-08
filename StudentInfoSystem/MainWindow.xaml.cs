@@ -25,12 +25,11 @@ namespace StudentInfoSystem
         public MainWindow()
         {
             InitializeComponent();
-            FillStudStatusChoices();
             this.DataContext = this;
 
         }
 
-        public MainWindow(Student currentStudent)
+        public MainWindow(UserLogin.Student currentStudent)
         {
             InitializeComponent();
             this.DataContext = currentStudent;
@@ -60,7 +59,7 @@ namespace StudentInfoSystem
 
         private void SetStudentInformation()
         {
-            Student currentStudent = GetStudent();
+            UserLogin.Student currentStudent = GetStudent();
             if (currentStudent != null)
             {
                 SetFaculty(currentStudent.Faculty);
@@ -88,37 +87,10 @@ namespace StudentInfoSystem
             }
         }
 
-        public List<string> StudStatusChoices { get; set; }
 
-        private void FillStudStatusChoices()
+        private UserLogin.Student GetStudent()
         {
-            StudStatusChoices = new List<string>();
-            using (IDbConnection connection = new
-            SqlConnection(Properties.Settings.Default.DbConnect))
-            {
-                string sqlquery =
-                @"SELECT StatusDescr
-FROM StudStatus";
-                IDbCommand command = new SqlCommand();
-                command.Connection = connection;
-                connection.Open();
-                command.CommandText = sqlquery;
-                IDataReader reader = command.ExecuteReader();
-                bool notEndOfResult;
-                notEndOfResult = reader.Read();
-                while (notEndOfResult)
-
-                {
-                    string s = reader.GetString(0);
-                    StudStatusChoices.Add(s);
-                    notEndOfResult = reader.Read();
-                }
-            }
-        }
-
-        private Student GetStudent()
-        {
-            return StudentData.GetStudentByNames(firstName.Text, middleName.Text, lastName.Text);
+            return UserLogin.StudentData.GetStudentByNames(firstName.Text, middleName.Text, lastName.Text);
         }
 
         private void SetFaculty(String facultyString)

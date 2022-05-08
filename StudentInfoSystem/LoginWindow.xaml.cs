@@ -22,6 +22,8 @@ namespace StudentInfoSystem
         public LoginWindow()
         {
             InitializeComponent();
+            new UserLogin.StudentInfoContext().CopyTestStudents();
+            new UserLogin.UserContext().CopyTestUsers();
             this.DataContext = new ViewModel.LoginVM();
         }
 
