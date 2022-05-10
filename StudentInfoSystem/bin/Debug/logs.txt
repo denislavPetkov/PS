@@ -38,3 +38,6 @@
 08.05.2022 г. 23:23:57;Denislav;STUDENT;Logged successfully!
 08.05.2022 г. 23:24:45;Denislav;STUDENT;Logged successfully!
 08.05.2022 г. 23:24:50;Denislav;INSPECTOR;Logged successfully!
+10.05.2022 г. 20:42:38;Denislav;STUDENT;Logged successfully!
+10.05.2022 г. 22:20:07;Denislav;STUDENT;Logged successfully!
+10.05.2022 г. 22:20:14;Denislav;INSPECTOR;Logged successfully!
