@@ -9,7 +9,6 @@ namespace UserLogin
         public Student() { }
 
         public Student(string name, string middleName, string lastName, string faculty, string specialization, string qualificationDegree, string studentStatus, string facultyNumber, int semestralCourse, int semestralStream, int semestralGroup) : base(name, lastName, facultyNumber, UserRoles.STUDENT.ToString(), DateTime.Now)
-
         {
             FirstName = name;
             MiddleName = middleName;
@@ -22,6 +21,13 @@ namespace UserLogin
             SemestralCourse = semestralCourse;
             SemestralStream = semestralStream;
             SemestralGroup = semestralGroup;
+        }
+
+        public Student(string firstname, string middlename, string lastname)
+        {
+            FirstName = firstname;
+            MiddleName = middlename;
+            LastName = lastname;
         }
 
         public string FirstName
@@ -53,6 +59,8 @@ namespace UserLogin
         { get; set; }
         public int SemestralGroup
         { get; set; }
+
+
 
         public string GetNames()
         {

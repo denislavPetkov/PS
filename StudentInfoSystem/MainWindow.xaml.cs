@@ -22,16 +22,18 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool executeOnChange = true;
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = this;
-
+            executeOnChange = true;
         }
 
         public MainWindow(UserLogin.Student currentStudent)
         {
             InitializeComponent();
+
             this.DataContext = currentStudent;
 
             var uriSource = new Uri(@"/StudentInfoSystem;component/Images/" + currentStudent.GetNames() + ".png", UriKind.Relative);
@@ -40,51 +42,44 @@ namespace StudentInfoSystem
             firstName.IsEnabled = false;
             middleName.IsEnabled = false;
             lastName.IsEnabled = false;
+       
+            executeOnChange = false;
         }
 
         private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {   
+            if (executeOnChange)
             SetStudentInformation();
         }
 
         private void MiddleName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            SetStudentInformation();
+            if (executeOnChange)
+                SetStudentInformation();
         }
 
         private void LastName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            SetStudentInformation();
+            if (executeOnChange)
+                SetStudentInformation();
         }
 
         private void SetStudentInformation()
         {
             UserLogin.Student currentStudent = GetStudent();
+
             if (currentStudent != null)
             {
-                SetFaculty(currentStudent.Faculty);
-                SetSpecialization(currentStudent.Specialization);
-                SetDegree(currentStudent.QualificationDegree);
-                SetStatus(currentStudent.StudentStatus.ToString());
-                SetFacultyNumber(currentStudent.FacultyNumber);
-                SetCourse(currentStudent.SemestralCourse.ToString());
-                SetStream(currentStudent.SemestralStream.ToString());
-                SetGroup(currentStudent.SemestralGroup.ToString());
                 var uriSource = new Uri(@"/StudentInfoSystem;component/Images/" + currentStudent.GetNames() + ".png", UriKind.Relative);
                 studentPicture.Source = new BitmapImage(uriSource);
-            }
-            else
+            } else
             {
-                SetFaculty("");
-                SetSpecialization("");
-                SetDegree("");
-                SetStatus("");
-                SetFacultyNumber("");
-                SetCourse("");
-                SetStream("");
-                SetGroup("");
+                // so we don't override the names in the form 
+                currentStudent = new UserLogin.Student(firstName.Text, middleName.Text, lastName.Text);
                 studentPicture.Source = null;
             }
+
+            this.DataContext = currentStudent;
         }
 
 
@@ -93,46 +88,6 @@ namespace StudentInfoSystem
             return UserLogin.StudentData.GetStudentByNames(firstName.Text, middleName.Text, lastName.Text);
         }
 
-        private void SetFaculty(String facultyString)
-        {
-            faculty.Text = facultyString;
-        }
-
-        private void SetSpecialization(String specializationString)
-        {
-            specialization.Text = specializationString;
-        }
-
-        private void SetDegree(String degreeString)
-        {
-            degree.Text = degreeString;
-        }
-
-        private void SetStatus(String statusString)
-        {
-            status.Text = statusString;
-        }
-
-        private void SetFacultyNumber(String facultyNumberString)
-        {
-            facultynumber.Text = facultyNumberString;
-        }
-
-        private void SetCourse(String courseString)
-        {
-            course.Text = courseString;
-        }
-
-        private void SetStream(String streamString)
-        {
-            stream.Text = streamString;
-        }
-
-        private void SetGroup(String groupString)
-        {
-            group.Text = groupString;
-        }
-
-      
+     
     }
 }
